@@ -76,7 +76,7 @@ spec:
 ---
 # Create persistent volume claim here
 apiVersion: v1
-kind: PersistentVolumeclaim
+kind: PersistentVolumeClaim
 metadata:
   name: wp-pv-claim
 spec:
