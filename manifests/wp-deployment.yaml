@@ -75,4 +75,13 @@ spec:
       # the PVC in your container spec
 ---
 # Create persistent volume claim here
-
+apiVersion: v1
+kind: PersistentVolumeclaim
+metadata:
+  name: wp-pv-claim
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 1Gi
