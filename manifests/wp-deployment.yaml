@@ -9,9 +9,9 @@ metadata:
 spec:
   ports:
     - port: 80
-  ##
-  # Create service selector labels here
-  ##
+  selector:
+    app: wordpress
+    tier: frontend
 ---
 apiVersion: v1
 kind: ConfigMap
@@ -21,6 +21,8 @@ data:
   ##
   # create non-sensative data attributes
   ##
+  host: wordpress-mysql
+  user: wordpress
 ---
 apiVersion: apps/v1
 kind: Deployment
